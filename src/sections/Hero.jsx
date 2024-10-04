@@ -1,5 +1,6 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
 const Hero = () => {
   return (
@@ -12,14 +13,18 @@ const Hero = () => {
 
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
-            <perspectiveCamera makeDefault  position={[0, 0 ,30]} />
-
-            <HackerRoom/>
+           
+            <PerspectiveCamera makeDefaultposition={[0, 0 ,30]} />
+          
+              <HackerRoom scale ={0.05} position={[0, 0, 0]} rotation = {[0, -Math.PI / 2, 0]}/>
+              <ambientLight intensity={1} />
+              <directionalLight position={[10,10,10]}/>
+            
 
         </Canvas>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
