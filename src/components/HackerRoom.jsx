@@ -10,9 +10,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const HackerRoom = (props) => {
-
-
-  const { nodes, materials } = useGLTF('/low_poly_80s_hacker_room/scene.gltf')
+    const { nodes, materials } = useGLTF('public/low_poly_80s_hacker_room/low_poly_80s_hacker_room.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[0, 0.336, 0]}>
@@ -936,5 +934,5 @@ const HackerRoom = (props) => {
   )
 }
 
-useGLTF.preload('/low_poly_80s_hacker_room/scene.gltf')
+useGLTF.preload('/public/low_poly_80s_hacker_room/low_poly_80s_hacker_room.glb')
 export default HackerRoom;

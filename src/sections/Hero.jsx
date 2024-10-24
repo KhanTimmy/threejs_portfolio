@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
            
-            <PerspectiveCamera makeDefaultposition={[0, 0 ,30]} />
+            <PerspectiveCamera makeDefault position={[0, 0 ,30]} />
           
               <HackerRoom scale ={0.05} position={[0, 0, 0]} rotation = {[0, -Math.PI / 2, 0]}/>
               <ambientLight intensity={1} />
